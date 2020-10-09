@@ -12,6 +12,11 @@ But your colleague just added [detekt](https://github.com/detekt/detekt) and now
 In order to get a nice cup of icecream you need to refactor your codebase so that the detekt issue goes away.
 `@Suppress` is not allowed, otherwise your boss will get mad! :rage:
   
-Maybe some kind of abstraction would be a good idea...
+## Are we open for extension and closed for modification?
 
-https://wiki.c2.com/?OpenClosedPrinciple
+The [open-close principle](https://wiki.c2.com/?OpenClosedPrinciple) states that a program should be open for extension but closed for modification.
+What does that mean for our icecream shop?
+
+Imagine we want to add a new icecream flavor (or remove one).
+What classes are affected by this and what do we need to change?
+Maybe there is a better way to model our icecream shop...
