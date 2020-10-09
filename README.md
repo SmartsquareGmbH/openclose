@@ -12,6 +12,6 @@ But your colleague just added [detekt](https://github.com/detekt/detekt) and now
 In order to get a nice cup of icecream you need to refactor your codebase so that the detekt issue goes away.
 `@Suppress` is not allowed, otherwise your boss will get mad! :rage:
   
-Maybe some kind of abstraction would be a good idea... :thinking_face:
+Maybe some kind of abstraction would be a good idea...
 
 https://wiki.c2.com/?OpenClosedPrinciple
