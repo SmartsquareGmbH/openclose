@@ -1,8 +1,10 @@
 package de.smartsquare.openclose.vanilla
 
-class VanillaRepository {
+import de.smartsquare.openclose.flavor.IcecreamRepository
 
-    fun scrapeBall(): VanillaBall {
+class VanillaRepository : IcecreamRepository<VanillaBall> {
+
+    override fun scrapeBall(): VanillaBall {
         return VanillaBall(1.25F)
     }
 }

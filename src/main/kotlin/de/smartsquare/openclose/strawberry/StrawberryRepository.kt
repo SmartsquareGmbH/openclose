@@ -1,8 +1,10 @@
 package de.smartsquare.openclose.strawberry
 
-class StrawberryRepository {
+import de.smartsquare.openclose.flavor.IcecreamRepository
 
-    fun scrapeBall(): StrawberryBall {
+class StrawberryRepository : IcecreamRepository<StrawberryBall> {
+
+    override fun scrapeBall(): StrawberryBall {
         return StrawberryBall(1.25F)
     }
 }
