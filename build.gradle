@@ -1,0 +1,47 @@
+buildscript {
+    ext {
+        detektVersion = "1.14.1"
+    }
+    
+    repositories {
+        jcenter()
+    }
+    
+    dependencies {
+        classpath "io.gitlab.arturbosch.detekt:detekt-gradle-plugin:$detektVersion"
+    }
+}
+
+plugins {
+    id 'org.jetbrains.kotlin.jvm' version '1.4.10'
+    id 'io.gitlab.arturbosch.detekt' version "$detektVersion"
+}
+
+group 'de.smartsquare'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+    jcenter()
+}
+
+dependencies {
+    implementation "org.jetbrains.kotlin:kotlin-stdlib"
+    testImplementation "org.junit.jupiter:junit-jupiter:5.4.2"
+    testImplementation "org.amshove.kluent:kluent:1.61"
+}
+
+test {
+    useJUnitPlatform()
+}
+
+detekt {
+    config = files("${project.rootDir}/detekt.yml")
+
+    buildUponDefaultConfig = true
+
+    reports {
+        xml.destination = file("$buildDir/reports/detekt/detekt.xml")
+        html.destination = file("$buildDir/reports/detekt/detekt.html")
+    }
+}
